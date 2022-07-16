@@ -1,0 +1,53 @@
+CREATE TABLE `bookings` (
+  `bookingId` int NOT NULL AUTO_INCREMENT,
+  `userId` int NOT NULL,
+  `userName` varchar(45) NOT NULL,
+  `vehicleId` int DEFAULT NULL,
+  `vehicleType` varchar(45) NOT NULL,
+  `vehicleNumber` varchar(45) NOT NULL,
+  `bookingDate` varchar(45) NOT NULL,
+  `returnDate` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`bookingId`)
+) AUTO_INCREMENT=1
+
+-----------------------------------------------------------------------------------------------------
+
+CREATE TABLE `managers` (
+  `managerId` int NOT NULL AUTO_INCREMENT,
+  `managerName` varchar(45) NOT NULL,
+  `managerBranch` varchar(45) NOT NULL,
+  `managerRole` varchar(45) NOT NULL,
+  `userId` int DEFAULT NULL,
+  PRIMARY KEY (`managerId`)
+) AUTO_INCREMENT=100001;
+
+------------------------------------------------------------------------------------------------------
+
+CREATE TABLE `users` (
+  `userid` int NOT NULL AUTO_INCREMENT,
+  `userName` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  `firstName` varchar(45) NOT NULL,
+  `lastName` varchar(45) NOT NULL,
+  `phoneNumber` varchar(45) NOT NULL,
+  `emailId` varchar(45) NOT NULL,
+  `totalBookings` int NOT NULL,
+  `role` varchar(45) NOT NULL,
+  PRIMARY KEY (`userid`)
+) AUTO_INCREMENT=100001;
+
+------------------------------------------------------------------------------------------------------
+
+CREATE TABLE `vehicles` (
+  `vehicleId` int NOT NULL AUTO_INCREMENT,
+  `vehicleNumber` varchar(45) DEFAULT NULL,
+  `vehicleType` varchar(45) DEFAULT NULL,
+  `fuelType` varchar(45) DEFAULT NULL,
+  `insurance` varchar(45) DEFAULT NULL,
+  `permit` varchar(45) DEFAULT NULL,
+  `driverName` varchar(45) DEFAULT NULL,
+  `driverMobile` varchar(45) DEFAULT NULL,
+  `isAvailable` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`vehicleId`)
+) AUTO_INCREMENT=1000;
+
