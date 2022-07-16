@@ -1,3 +1,7 @@
+CREATE DATABASE `transport`;
+
+-----------------------------------------------------------------------------------------------------
+
 CREATE TABLE `bookings` (
   `bookingId` int NOT NULL AUTO_INCREMENT,
   `userId` int NOT NULL,
